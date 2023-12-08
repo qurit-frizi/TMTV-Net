@@ -9,9 +9,11 @@ TMTV-Net showcases robust performance and versatility in TMTV segmentation acros
 ***Results:***
 Our cascaded soft-voting guided approach resulted in performance with an average DSC of 0.68±0.12 for the internal test data from developmental dataset, and an average DSC of 0.66±0.18 on the multi-site external data (n=518), significantly outperforming (p<0.001) state-of-the-art (SOTA) approaches including nnU-Net and SWIN UNETR. While TTA yielded en-hanced performance gains for some of the comparator methods, its impact on our cascaded ap-proach was found to be negligible (DSC: 0.66±0.16). Our approach reliably quantified TMTV, with a correlation of 0.89 with the ground truth (p<0.001). Furthermore, in terms of visual as-sessment, concordance between quantitative evaluations and clinician feedback was observed in the majority of cases. The average relative error (ARE) and the absolute error (AE) in TMTV prediction on external multi-centric dataset are ARE=0.43±0.54 and AE=157.32±378.12 (mL) for all the external test data (n=518) and ARE=0.30±0.22 and AE=82.05±99.78 (mL) when the 10 % outliers (n=53) were excluded. 
 
-## 📁 Required folder structure
 
-## ⚙️  Installation <a name="installation"> </a>
+## ⚙️  Usage <a name="installation"> </a>
+
+## 📁 Required folder structure for training
+
 
 ### [Easy use: testing mode](#virtual) <a name="easy-use-testing-mode"> </a> 
 
