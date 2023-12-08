@@ -9,12 +9,14 @@ TMTV-Net showcases robust performance and versatility in TMTV segmentation acros
 ***Results:***
 Our cascaded soft-voting guided approach resulted in performance with an average DSC of 0.68±0.12 for the internal test data from developmental dataset, and an average DSC of 0.66±0.18 on the multi-site external data (n=518), significantly outperforming (p<0.001) state-of-the-art (SOTA) approaches including nnU-Net and SWIN UNETR. While TTA yielded en-hanced performance gains for some of the comparator methods, its impact on our cascaded ap-proach was found to be negligible (DSC: 0.66±0.16). Our approach reliably quantified TMTV, with a correlation of 0.89 with the ground truth (p<0.001). Furthermore, in terms of visual as-sessment, concordance between quantitative evaluations and clinician feedback was observed in the majority of cases. The average relative error (ARE) and the absolute error (AE) in TMTV prediction on external multi-centric dataset are ARE=0.43±0.54 and AE=157.32±378.12 (mL) for all the external test data (n=518) and ARE=0.30±0.22 and AE=82.05±99.78 (mL) when the 10 % outliers (n=53) were excluded. 
 
+![image](https://github.com/qurit-frizi/TMTV-Net/assets/84542058/3b7a51f8-8b6c-4dc7-a3f4-711efc30995d)
+*Figure 2: Two results of the segmented TMTV on data from UW center. (a) Hodgkin Case, DSC=0.83, TMTV relative error=0.18, (b) DLBCL case, DSC=0.66, TMTV relative error=0.10, (c) Hodgkins case, DSC=0.76, (d) DLBCL, DSC=0.67.*
 
 ## ⚙️  Usage <a name="installation"> </a>
 
 
-## 📁 Required folder structure for training
-## Data Preprocessing
+#📁 Required folder structure for training
+# Data Preprocessing
 
 For training you need to convert the nifti files to HDF5:
 
@@ -23,12 +25,13 @@ For training you need to convert the nifti files to HDF5:
 
 The preprocessed data will be stored here: `<root>/dataset/preprocessed/`
 
-## 📁 Required folder structure for testing
+# 📁 Required folder structure for testing
 
-**Docker**
-TMTV-Net container can be accessd here: Link
+
 
 ### [Easy use: testing mode](#virtual) <a name="easy-use-testing-mode"> </a> 
+#**Docker**
+TMTV-Net container can be accessd here: Link
 
 ## 📖 Citations (to be updated based on the revision result)
 Please cite the following paper if you use TMTV-Net for your research:
