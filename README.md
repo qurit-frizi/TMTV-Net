@@ -38,7 +38,7 @@ TMTV-Net container can be accessd here: Link
 
 ## 📖 Citations (to be updated based on the revision result)
 Please cite the following paper if you use TMTV-Net for your research:
-Yousefirizi, F. TMTV-Net: Fully Automated Total Metabolic Tumor Volume Segmenta-tion in Lymphoma PET/CT Images – a Multi-Center Generalizability Analysis 
+Yousefirizi, F. et. al. TMTV-Net: Fully Automated Total Metabolic Tumor Volume Segmenta-tion in Lymphoma PET/CT Images – a Multi-Center Generalizability Analysis 
 
 ## 🙏 Acknowledgments
 *We welcome and encourage you to share your results with us.*
