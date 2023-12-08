@@ -12,9 +12,21 @@ Our cascaded soft-voting guided approach resulted in performance with an average
 
 ## ⚙️  Usage <a name="installation"> </a>
 
+
 ## 📁 Required folder structure for training
+## Data Preprocessing
+
+For training you need to convert the nifti files to HDF5:
+
+    cd <root>/auto_pet/src/auto_pet/projects/segmentation/preprocessing/
+    python create_dataset.py
+
+The preprocessed data will be stored here: `<root>/dataset/preprocessed/`
 
 ## 📁 Required folder structure for testing
+
+**Docker**
+TMTV-Net container can be accessd here: Link
 
 ### [Easy use: testing mode](#virtual) <a name="easy-use-testing-mode"> </a> 
 
