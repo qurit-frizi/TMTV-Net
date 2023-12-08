@@ -2,7 +2,8 @@
 
 ***Overview***
 Total metabolic tumor volume (TMTV) segmentation has significant value enabling quantitative imaging biomarkers for lymphoma management. In this work, we tackle the challenging task of automated tumor delineation in lymphoma from PET/CT scans using a cascaded approach.TMTV-Net focuses on automating Total Metabolic Tumor Volume (TMTV) segmentation from PET/CT scans, offering valuable quantitative imaging biomarkers for effective lymphoma management. This repository details our approach and results.
-TMTV-Net showcases robust performance and versatility in TMTV segmentation across diverse multi-site external datasets, covering a spectrum of lymphoma subtypes. Our model is containerized and available in this repository for further multi-site evaluation and generalizability analysis. *We welcome and encourage you to share your results with us.*
+TMTV-Net showcases robust performance and versatility in TMTV segmentation across diverse multi-site external datasets, covering a spectrum of lymphoma subtypes. Our model is containerized and available in this repository for further multi-site evaluation and generalizability analysis. 
+*We welcome and encourage you to share your results with us.*
 
 ![image](https://github.com/qurit-frizi/TMTV-Net/assets/84542058/ba5d838e-f2ac-4d6a-b029-511e1de2853e)
 
