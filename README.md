@@ -15,7 +15,9 @@ Our cascaded soft-voting guided approach resulted in performance with an average
 
 ### [Easy use: testing mode](#virtual) <a name="easy-use-testing-mode"> </a> 
 
-## 📖 Citations 
+## 📖 Citations (to be updated based on the revision result)
+Please cite the following paper if you use TMTV-Net for your research:
+Yousefirizi, F. TMTV-Net: Fully Automated Total Metabolic Tumor Volume Segmenta-tion in Lymphoma PET/CT Images – a Multi-Center Generalizability Analysis 
 
 ## 🙏 Acknowledgments
 *We welcome and encourage you to share your results with us.*
