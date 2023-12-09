@@ -68,7 +68,7 @@ Due to the large size of the model files, we use Git LFS (Large File Storage) to
 Installing Git LFS:
 #### On Linux
 sudo apt-get install git-lfs
-#### On macOS
+#### On macOS1
 brew install git-lfs
 
 Clone Repository with LFS:
