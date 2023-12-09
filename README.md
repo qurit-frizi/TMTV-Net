@@ -66,9 +66,9 @@ docker run -it tmtv-net-inference python main.py
 Due to the large size of the model files, we use Git LFS (Large File Storage) to efficiently handle and version these files. Make sure you have Git LFS installed to fetch the model weights properly.
 
 Installing Git LFS:
-# On Linux
+##### On Linux
 sudo apt-get install git-lfs
-# On macOS
+##### On macOS
 brew install git-lfs
 
 Clone Repository with LFS:
