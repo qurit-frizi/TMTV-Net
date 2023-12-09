@@ -33,8 +33,52 @@ The preprocessed data will be stored here: `<root>/dataset/preprocessed/`
 
 
 ### [Easy use: testing mode](#virtual) <a name="easy-use-testing-mode"> </a> 
-#**Docker**
-TMTV-Net container can be accessd here: Link
+## 🐳 Docker for Inference
+
+This repository includes a Docker setup for running inference using TMTV-Net. The Docker image encapsulates the necessary environment, dependencies, and the trained model for seamless and reproducible inference on new data.
+
+### 📂 Directory Structure
+
+- **src:** Python files serving as libraries and helpers.
+- **models:** Folder containing the trained model weights (`.model` files).
+- **dockerfile:** Configuration file for building the Docker image.
+- **main.py:** Entry point for running inference.
+- **requirements.txt:** List of Python dependencies required for the Docker image.
+
+### 🚀 Usage
+
+#### 1. Build Docker Image
+
+
+Before running inference, build the Docker image:
+
+``bash
+docker build -t tmtv-net-inference .
+
+#### 1. Run Inference
+
+Run the Docker container for inference:
+
+docker run -it tmtv-net-inference python main.py
+
+
+📦 Git LFS (Large File Storage)
+Due to the large size of the model files, we use Git LFS (Large File Storage) to efficiently handle and version these files. Make sure you have Git LFS installed to fetch the model weights properly.
+
+Installing Git LFS:
+# On Linux
+sudo apt-get install git-lfs
+# On macOS
+brew install git-lfs
+
+Clone Repository with LFS:
+git lfs install
+git clone https://github.com/qurit-frizi/TMTV-Net.git
+
+
+Feel free to explore and adapt the provided commands based on your specific folder structure or naming conventions. This Docker setup ensures a consistent and reproducible environment for running TMTV-Net inference.
+
+
 
 ## 📖 Citations (to be updated based on the revision result)
 Please cite the following paper if you use TMTV-Net for your research:
