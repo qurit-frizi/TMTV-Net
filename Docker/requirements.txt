@@ -1,0 +1,15 @@
+# pip dependent 
+torch
+SimpleITK
+numpy
+monai
+scikit-image
+scikit-learn
+matplotlib
+bokeh==2.4.3
+lz4
+md2pdf
+pydicom
+rt_utils
+nibabel
+mdutils
