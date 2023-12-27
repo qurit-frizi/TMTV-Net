@@ -79,7 +79,7 @@ git clone https://github.com/qurit-frizi/TMTV-Net.git
 Feel free to explore and adapt the provided commands based on your specific folder structure or naming conventions. This Docker setup ensures a consistent and reproducible environment for running TMTV-Net inference.
 
 ## Usage
-TMTV-Net is shared for research-use only. COMMERCIAL USE IS PROHIBITED for the time being. For further information please email
+TMTV-Net is shared for research-use only. COMMERCIAL USE IS PROHIBITED for the time being. For further information please email frizi@bccrc.ca 
 
 ## 📖 Citations (to be updated based on the revision result)
 Please cite the following paper if you use TMTV-Net for your research:
