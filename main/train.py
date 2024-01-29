@@ -41,7 +41,7 @@ if __name__ == '__main__':
             'batch_size': 2,
             'data_loading_workers': default('data_loading_workers', 2, output_type=int),
             'map_workers': default('map_workers', 3, output_type=int),
-            'nb_epochs': default('nb_epochs', 2, output_type=int),
+            'nb_epochs': default('nb_epochs', 12000, output_type=int),
             'learning_rate': 1e-3,
             'weight_decay': 1e-6,
             'eval_every_X_epoch': default('eval_every_X_epoch', 200, output_type=int),
