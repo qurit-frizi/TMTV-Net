@@ -84,6 +84,6 @@ Please cite the following paper if you use TMTV-Net for your research:
 Yousefirizi, F. et. al. TMTV-Net: Fully Automated Total Metabolic Tumor Volume Segmenta-tion in Lymphoma PET/CT Images – a Multi-Center Generalizability Analysis 
 
 ## 🙏 Acknowledgments
-[Torch Research Workflows Documentation](https://trw.readthedocs.io/en/latest/)
+[Torch Research Workflows](https://trw.readthedocs.io/en/latest/)
 
 *We welcome and encourage you to share your results with us.*
