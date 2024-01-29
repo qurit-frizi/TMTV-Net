@@ -85,4 +85,5 @@ Yousefirizi, F. et. al. TMTV-Net: Fully Automated Total Metabolic Tumor Volume S
 
 ## 🙏 Acknowledgments
 [Torch Research Workflows Documentation](https://trw.readthedocs.io/en/latest/)
+
 *We welcome and encourage you to share your results with us.*
