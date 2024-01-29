@@ -5,6 +5,7 @@ import logging
 import torch
 from export import export_sample
 from flatten import flatten
+import collections
 
 
 def to_value(v):
@@ -291,7 +292,7 @@ class CallbackReportingExportSamples(Callback):
             table_name=self.table_name,
             table_role='data_samples')
 
-        from ..train.trainer import eval_loop
+        from trainer import eval_loop
         logger.info(f'export started..., N={self.max_samples}')
         for dataset_name, dataset in datasets.items():
             root = os.path.join(options.workflow_options.current_logging_directory, 'static', self.table_name)

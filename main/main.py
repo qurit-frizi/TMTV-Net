@@ -21,8 +21,6 @@ from preprocess import PreprocessDataV4_lung_soft_tissues_hot as Preprocessing
 from model_unet_multiclass_deepsupervision_configured_v1 import SimpleMulticlassUNet_dice_ce_fov_v9_ds_lung_soft_hot_boundary as ModelLargeFov
 from model_refiner_multiclass_deepsupervision_configured_v1 import Refiner_dice_ce_fov_v1_ds_lung_soft_hot_boundary as ModelRefiner
 from model_stacking import ModelStacking as ModelEnsemble
-# from auto_pet.projects.segmentation.preprocessing.create_dataset import create_case
-# from auto_pet.projects.segmentation.callbacks import create_inference
 from basic_typing import Batch
 import SimpleITK as sitk
 from SimpleITK import GetArrayFromImage, sitkNearestNeighbor, Image
@@ -1403,7 +1401,7 @@ if __name__ == '__main__':
         " "
     )
     mdFile.new_paragraph(
-        "**Module version**: 0.1.0"
+        "**Module version**: 1.0"
         " "
     )
     mdFile.new_paragraph(

@@ -8,6 +8,7 @@ import numbers
 import os
 import time
 import itertools
+from outputs import Output
 
 try:
     from torch.cuda.amp import autocast
@@ -106,7 +107,7 @@ def aggregate_values(values):
             return torch.cat(values)
         else:
             return torch.sum(torch.stack(values)) / len(values)
-    elif isinstance(value, outputs_trw.Output):
+    elif isinstance(value, Output):
         return values[0]
     elif isinstance(value, list):
         return list(itertools.chain.from_iterable(values))
@@ -202,7 +203,7 @@ def loss_term_cleanup(loss_terms):
         loss_terms: the loss terms to be cleaned up
     """
     for name, loss_term in loss_terms.items():
-        ref = loss_term.get(outputs_trw.Output.output_ref_tag)
+        ref = loss_term.get(Output.output_ref_tag)
         if ref is not None:
             ref.loss_term_cleanup(loss_term)
 

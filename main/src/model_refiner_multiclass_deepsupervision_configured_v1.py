@@ -5,7 +5,6 @@ from basic_typing import Batch
 from layers.unet_base import LatentConv
 from layers.blocks import BlockConvNormActivation
 from typing import Dict
-# import trw
 import torch
 
 import torch

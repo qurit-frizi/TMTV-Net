@@ -183,8 +183,8 @@ class CallbackSaveLastModel(Callback):
         export_path = os.path.join(options.workflow_options.current_logging_directory, name)
 
         # verify the metrics are not NaN
-        from ..train.trainer_v2 import TrainerV2
-        from trw.train.utilities import get_device
+        from trainer_v2 import TrainerV2
+        from utilities import get_device
         if self.revert_if_nan_metrics is not None and len(history) > 0:
             should_not_export = should_not_export_model(history[-1], self.revert_if_nan_metrics)
 

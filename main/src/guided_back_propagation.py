@@ -30,7 +30,7 @@ logger = logging.getLogger(__name__)
 
 
 def post_process_output_id(output: outputs.Output) -> torch.Tensor:
-    assert isinstance(output, outputs.Output), 'must be a `trw.train.Output`'
+    assert isinstance(output, outputs.Output), 'must be a `Output`'
     return output.output
 
 
@@ -38,17 +38,17 @@ def post_process_output_for_gradient_attribution(output: outputs.Output):
     """
     Postptocess the output to be suitable for gradient attribution.
 
-    In particular, if we have a :class:`trw.train.OutputClassification`, we need to apply
+    In particular, if we have a :class:`OutputClassification`, we need to apply
     a softmax operation so that we can backpropagate the loss of a particular class with
     the appropriate value (1.0).
 
     Args:
-        output: a :class:`trw.train.OutputClassification`
+        output: a :class:`OutputClassification`
 
     Returns:
         a :class:`torch.Tensor`
     """
-    assert isinstance(output, outputs.Output), 'must be a `trw.train.Output`'
+    assert isinstance(output, outputs.Output), 'must be a `Output`'
     if isinstance(output, outputs.OutputClassification):
         return torch.softmax(output.output, dim=1)
 
@@ -62,7 +62,7 @@ class GuidedBackprop:
     .. warning:
         * We assume the model is built with `Relu` activation function
 
-        * the model will be instrumented, use `trw.train.CleanAddedHooks` to remove the
+        * the model will be instrumented, use `CleanAddedHooks` to remove the
             hooks once guided back-propagation is finished
     """
     def __init__(self,
