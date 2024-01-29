@@ -39,7 +39,7 @@ def to_value(v):
 
 from .callback import Callback
 import utilities
-import outputs as trw_outputs
+import outputs
 import sample_export
 import sequence_array
 import sampler
@@ -151,9 +151,9 @@ class CallbackWorstSamplesByEpoch(Callback):
             export_top_k_samples=50,
             uids_name=sequence_array.sample_uid_name,
             output_of_interest=(
-                    trw_outputs.OutputClassification,
-                    trw_outputs.OutputSegmentation,
-                    trw_outputs.OutputRegression)):
+                    outputs.OutputClassification,
+                    outputs.OutputSegmentation,
+                    outputs.OutputRegression)):
         """
 
         Args:

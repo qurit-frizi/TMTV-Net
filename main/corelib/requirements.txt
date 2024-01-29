@@ -1,0 +1,8 @@
+pytest
+scikit-learn
+scikit-image
+scipy
+pydicom
+matplotlib
+SimpleITK
+lz4

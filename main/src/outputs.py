@@ -708,7 +708,7 @@ class OutputLoss(Output):
     """
     Represent a given loss as an output.
 
-    This can be useful to add additional regularizer to the training (e.g., :class:`trw.train.LossCenter`).
+    This can be useful to add additional regularizer to the training (e.g., :class:`LossCenter`).
     """
     def __init__(
             self,

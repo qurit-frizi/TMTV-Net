@@ -221,7 +221,7 @@ class MetricSegmentationDice(Metric):
         if self.aggregate_by is not None:
             aggregate_by = outputs.get(self.aggregate_by)
             assert aggregate_by is not None, f'cannot find the aggregate_by={self.aggregate_by} in batch! if using ' \
-                                             f'`trw.train.OutputSegmentation`, make sure to set `sample_uid_name`' \
+                                             f'`OutputSegmentation`, make sure to set `sample_uid_name`' \
                                              f'appropriately'
         else:
             aggregate_by = None

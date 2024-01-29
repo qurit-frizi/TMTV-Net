@@ -1,8 +1,9 @@
 import sequence
-import sampler as sampler_trw
+import sampler as sampler_src
 import numpy as np
 import collections
 import copy
+import torch
 
 # this the name used for the sample UID
 sample_uid_name = 'sample_uid'
@@ -84,7 +85,7 @@ class SequenceArray(sequence.Sequence):
     def __init__(
             self,
             split,
-            sampler=sampler_trw.SamplerRandom(),
+            sampler=sampler_src.SamplerRandom(),
             transforms=None,
             use_advanced_indexing=True,
             sample_uid_name=sample_uid_name):
@@ -112,7 +113,7 @@ class SequenceArray(sequence.Sequence):
 
     def subsample(self, nb_samples):
         # get random indices
-        subsample_sample = sampler_trw.SamplerRandom(batch_size=nb_samples)
+        subsample_sample = sampler_src.SamplerRandom(batch_size=nb_samples)
         subsample_sample.initializer(self.split)
 
         # extract the indices
@@ -186,7 +187,7 @@ class SequenceArray(sequence.Sequence):
 
 class SequenceIteratorArray(sequence.SequenceIterator):
     """
-    Iterate the elements of an :class:`trw.train.SequenceArray` sequence
+    Iterate the elements of an :class:`SequenceArray` sequence
 
     Assumptions:
         - underlying `base_sequence` doesn't change sizes while iterating

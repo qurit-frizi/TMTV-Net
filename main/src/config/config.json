@@ -1,0 +1,15 @@
+{
+   "datasets": {
+      "auto_pet": {
+         "train": [
+            "SK219034353_tp_study1.hdf5"
+         ],
+         "valid": [
+            "SK253268463_tp_study1.hdf5"
+         ],
+         "test": [
+            "SK263777599_tp_study1.hdf5"
+         ]
+      }
+   }
+}
