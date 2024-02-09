@@ -76,8 +76,8 @@ Feel free to explore and adapt the provided commands based on your specific fold
 TMTV-Net is shared for research-use only. COMMERCIAL USE IS PROHIBITED for the time being. For further information please email frizi@bccrc.ca 
 
 ## 📖 Citations (to be updated based on the revision result)
-Please cite the following paper (https://pubmed.ncbi.nlm.nih.gov/38326655/) if you use TMTV-Net for your research:
-Yousefirizi, F. et. al. TMTV-Net: Fully Automated Total Metabolic Tumor Volume Segmenta-tion in Lymphoma PET/CT Images – a Multi-Center Generalizability Analysis, European Journal of Nuclear Medicine and Molecular Imaging. 2024 Feb 8. doi: 10.1007/s00259-024-06616-x.
+Please cite the following paper if you use TMTV-Net for your research:
+[Yousefirizi, F. et. al. TMTV-Net: Fully Automated Total Metabolic Tumor Volume Segmenta-tion in Lymphoma PET/CT Images – a Multi-Center Generalizability Analysis, European Journal of Nuclear Medicine and Molecular Imaging. 2024 Feb 8. doi: 10.1007/s00259-024-06616-x.](https://pubmed.ncbi.nlm.nih.gov/38326655/)
 
 ## 🙏 Acknowledgments
 [Torch Research Workflows](https://trw.readthedocs.io/en/latest/)
