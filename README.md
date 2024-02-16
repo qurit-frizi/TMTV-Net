@@ -48,13 +48,15 @@ Before running inference, build the Docker image:
 
 ``bash
 docker build -t tmtv-net-inference .
+``
 
 #### 1. Run Inference
 
 Run the Docker container for inference:
 
-docker run -it tmtv-net-inference python main.py
-
+``bash
+docker run -it -v [/absolute/local/data/folder]:/input -v [/absolute/local/output/folder]:/output tmtv-net-inference python main.py
+``
 
 📦 Git LFS (Large File Storage)
 Due to the large size of the model files, we use Git LFS (Large File Storage) to efficiently handle and version these files. Make sure you have Git LFS installed to fetch the model weights properly.
