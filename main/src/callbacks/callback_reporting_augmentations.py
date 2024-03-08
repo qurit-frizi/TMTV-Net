@@ -150,7 +150,7 @@ class CallbackReportingAugmentations(Callback):
                 continue
 
             if not isinstance(split, sequence.Sequence):
-                logger.warning('split is not a `Sequence`, can\'t subsample '
+                logger.warning('split is not a `trw.train.Sequence`, can\'t subsample '
                                'the sequence. This split is discarded!')
                 continue
 

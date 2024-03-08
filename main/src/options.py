@@ -13,13 +13,13 @@ def get_logging_root(logging_root: Optional[str] = None) -> str:
     Return the data root directory
     """
     if logging_root is None:
-        logging_root = os.environ.get('LOGGING_ROOT')
+        logging_root = os.environ.get('TRW_LOGGING_ROOT')
 
     if logging_root is None:
         if 'Windows' in platform.system():
-            logging_root = 'c:/logs/'
+            logging_root = 'c:/trw_logs/'
         else:
-            logging_root = '$HOME/logs/'
+            logging_root = '$HOME/trw_logs/'
 
     logging_root = os.path.expandvars(os.path.expanduser(logging_root))
     return logging_root
@@ -108,7 +108,7 @@ class Options:
 
         if device is None:
             if torch.cuda.device_count() > 0:
-                env_device = os.environ.get('DEVICE')
+                env_device = os.environ.get('TRW_DEVICE')
                 if env_device is not None:
                     device = torch.device(env_device)
                 else:

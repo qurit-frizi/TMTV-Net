@@ -6,7 +6,7 @@ def find_global_name(name):
     Find a function or class from its name. If not found, raise a :class:`RuntimeError`
 
     Examples:
-        >>> find_global_name('find_global_name')
+        >>> find_global_name('trw.utils.find_global_name')
 
     Args:
         name: a name with possibly namespaces

@@ -283,7 +283,7 @@ class HyperParameters:
                 take default value at creation but random
             hparams_to_randomize: this is the list og hyper-parameters to randomize. Other hyper-parameters
                 will be kept constant during optimization. If `None`, all hyper-parameters will be
-                randomized. This can be a regular expression (e.g., `optimizer.*` so that we can match hierarchy
+                randomized. This can be a regular expression (e.g., `trw.optimizer.*` so that we can match hierarchy
                 of hyper-parameters)
         """
         self.hparams_to_randomize = hparams_to_randomize

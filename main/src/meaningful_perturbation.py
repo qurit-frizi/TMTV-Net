@@ -58,7 +58,7 @@ logger = logging.getLogger(__name__)
 
 def default_optimizer(params, nb_iters, learning_rate=0.5):
     """
-    Create a default optimizer for :class:`MeaningfulPerturbation`
+    Create a default optimizer for :class:`trw.train.MeaningfulPerturbation`
 
     Args:
         params: the parameters to optimize

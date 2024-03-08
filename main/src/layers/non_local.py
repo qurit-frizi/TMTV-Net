@@ -5,7 +5,7 @@ from basic_typing import TorchTensorNCX
 
 from layers.layer_config import LayerConfig
 from layers.blocks import BlockConv
-
+# import trw
 
 
 def linear_embedding(config: LayerConfig, input_channels: int, output_channels: int) -> nn.Module:

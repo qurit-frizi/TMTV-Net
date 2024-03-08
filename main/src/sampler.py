@@ -194,7 +194,7 @@ class SamplerSubsetRandomByListInterleaved(Sampler):
 
         >>> l1 = np.asarray([1, 2])
         >>> l2 = np.asarray([3, 4, 5])
-        >>> sampler = SamplerSubsetRandomByListInterleaved([l1, l2])
+        >>> sampler = trw.train.SamplerSubsetRandomByListInterleaved([l1, l2])
         >>> sampler.initializer(None)
         >>> indices = [i for i in sampler]
         # indices could be [1, 5, 2, 4]

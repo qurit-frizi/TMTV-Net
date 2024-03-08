@@ -546,11 +546,11 @@ def prepare_loss_terms(outputs, batch, is_training):
     """
     Return the loss_terms for the given outputs
     """
-    from outputs import Output
+    from .outputs_trw import Output
 
     loss_terms = collections.OrderedDict()
     for output_name, output in outputs.items():
-        assert isinstance(output, Output), f'output must be a `Output`' \
+        assert isinstance(output, Output), f'output must be a `trw.train.Output`' \
                                                        f' instance. Got={type(output)}'
         loss_term = output.evaluate_batch(batch, is_training)
         if loss_term is not None:

@@ -82,7 +82,7 @@ class Gan(nn.Module):
         - simple GAN (i.e., no observation)
 
     Notes:
-        Here the module will have its own optimizer. The :class:`Trainer` should have ``optimizers_fn``
+        Here the module will have its own optimizer. The :class:`trw.train.Trainer` should have ``optimizers_fn``
         set to ``None``.
     """
 

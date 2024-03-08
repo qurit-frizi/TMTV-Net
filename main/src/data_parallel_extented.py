@@ -8,7 +8,7 @@ def gather_extended(outputs, target_device, dim=0):
     Gathers tensors from different GPUs on a specified device
       (-1 means the CPU).
 
-    This is an extended version of `` compared to pytorch to support :class:`Output`
+    This is an extended version of `` compared to pytorch to support :class:`trw.train.Output`
     """
 
     from torch.nn.parallel._functions import Gather
@@ -25,7 +25,7 @@ def gather_extended(outputs, target_device, dim=0):
         # Torch 1.3 modification
         #
         if isinstance(out, Output):
-            # TODO need to be extensible! create a output.gather function
+            # TODO need to be extensible! create a trw.train.output.gather function
             # TODO merge metrics too!
             outputs_t = [o.output for o in outputs]
             out.output = gather_map(outputs_t)
@@ -57,7 +57,7 @@ def gather_extended(outputs, target_device, dim=0):
 class DataParallelExtended(nn.DataParallel):
     """
     Customized version of :class:`torch.nn.DataParallel` to support model with
-    complex outputs such as :class:`Output`
+    complex outputs such as :class:`trw.train.Output`
     """
     def __init__(self, *arg, **argv):
         super().__init__(*arg, **argv)

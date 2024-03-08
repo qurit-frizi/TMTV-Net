@@ -72,8 +72,8 @@ class Sequence:
         Returns:
             a collated sequence of batches
         """
-        from sequence_collate import SequenceCollate
-        return SequenceCollate(self, collate_fn=collate_fn, device=device)
+        from . import sequence_collate
+        return sequence_collate.SequenceCollate(self, collate_fn=collate_fn, device=device)
 
     def map(self, function_to_run, nb_workers=0, max_jobs_at_once=None, queue_timeout=default_queue_timeout, collate_fn=None, max_queue_size_pin=None):
         """
@@ -92,8 +92,8 @@ class Sequence:
             thread (the workers queue can be independently set)
         :return: a sequence of batches
         """
-        from sequence_map import SequenceMap
-        return SequenceMap(
+        from . import sequence_map
+        return sequence_map.SequenceMap(
             self,
             function_to_run=function_to_run,
             nb_workers=nb_workers,
@@ -124,7 +124,7 @@ class Sequence:
         This sequence will split batches in smaller batches if the underlying sequence batch is too large.
 
         This sequence can be useful to manage very large tensors. Indeed, this class avoids
-        concatenating tensors (as opposed to in :class:`SequenceReBatch`). Since this operation
+        concatenating tensors (as opposed to in :class:`trw.train.SequenceReBatch`). Since this operation
         can be costly as the tensors must be reallocated. In this case, it may be faster to
         work on a smaller batch by avoiding the concatenation cost.
 
@@ -149,8 +149,8 @@ class Sequence:
             discard_batch_not_full: if True, the last batch will be discarded if not full
             collate_fn: function to merge multiple batches
         """
-        from sequence_rebatch import SequenceReBatch
-        return SequenceReBatch(
+        from . import sequence_rebatch
+        return sequence_rebatch.SequenceReBatch(
             source_split=self,
             batch_size=batch_size,
             discard_batch_not_full=discard_batch_not_full,
@@ -199,8 +199,8 @@ class Sequence:
                 reservoir is updated and depend less on the speed of hardware. Note that to have an effect,
                 `max_jobs_at_once` should be greater than `max_reservoir_replacement_size`.
         """
-        from sequence_async_reservoir import SequenceAsyncReservoir
-        return SequenceAsyncReservoir(
+        from . import sequence_async_reservoir
+        return sequence_async_reservoir.SequenceAsyncReservoir(
             source_split=self,
             max_reservoir_samples=max_reservoir_samples,
             function_to_run=function_to_run,

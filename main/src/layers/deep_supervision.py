@@ -42,7 +42,8 @@ class DeepSupervision(nn.Module):
     This is mostly used for segmentation tasks.
 
     Example:
-        >>> backbone = layers.UNetBase(dim=2, input_channels=3, channels=[2, 4, 8], output_channels=2)
+        >>> import trw
+        >>> backbone = trw.layers.UNetBase(dim=2, input_channels=3, channels=[2, 4, 8], output_channels=2)
         >>> deep_supervision = DeepSupervision(backbone, [3, 8, 16])
         >>> i = torch.zeros([1, 3, 8, 16], dtype=torch.float32)
         >>> t = torch.zeros([1, 1, 8, 16], dtype=torch.long)
@@ -63,7 +64,7 @@ class DeepSupervision(nn.Module):
 
         Args:
             backbone: the backbone that will create a hierarchy of features. Must inherit
-                from :class:`layer.ModuleWithIntermediate`
+                from :class:`trw.layer.ModuleWithIntermediate`
             input_target_shape: a shape that will be used to instantiate the outputs of the backbone. Internally,
                 this is used to create output layers compatible with the backbone
             output_creator: specify what type of output and criterion to optimize

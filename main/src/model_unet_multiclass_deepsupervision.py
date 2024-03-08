@@ -5,6 +5,7 @@ from layers.unet_base import LatentConv
 from layers.blocks import BlockConvNormActivation
 from layers.deep_supervision import DeepSupervision
 from typing import Dict, Sequence
+# import trw
 import torch
 
 import torch
@@ -12,6 +13,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 from basic_typing import TorchTensorNCX
+# from auto_pet import loss_surface
 from outputs import OutputSegmentation, OutputEmbedding, OutputLoss
 from losses import LossFocalMulticlass, LossDiceMulticlass
 
@@ -63,7 +65,8 @@ class DeepSupervisionComposite(nn.Module):
     This is mostly used for segmentation tasks.
 
     Example:
-        >>> backbone = UNetBase(dim=2, input_channels=3, channels=[2, 4, 8], output_channels=2)
+        >>> import trw
+        >>> backbone = trw.layers.UNetBase(dim=2, input_channels=3, channels=[2, 4, 8], output_channels=2)
         >>> deep_supervision = DeepSupervisionSum(backbone, [3, 8, 16])
         >>> i = torch.zeros([1, 3, 8, 16], dtype=torch.float32)
         >>> t = torch.zeros([1, 1, 8, 16], dtype=torch.long)
@@ -81,7 +84,7 @@ class DeepSupervisionComposite(nn.Module):
 
         Args:
             backbone: the backbone that will create a hierarchy of features. Must inherit
-                from :class:`ModuleWithIntermediate`
+                from :class:`trw.layer.ModuleWithIntermediate`
             input_target_shape: a shape that will be used to instantiate the outputs of the backbone. Internally,
                 this is used to create output layers compatible with the backbone
             output_block: the block to be used to calculate the output
