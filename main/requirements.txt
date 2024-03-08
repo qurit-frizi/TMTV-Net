@@ -16,4 +16,3 @@ mdutils
 pandas
 tqdm
 scipy
-pytzs
