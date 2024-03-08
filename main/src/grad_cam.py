@@ -147,7 +147,7 @@ class GradCam:
                 if selected_output is None:
                     # can't find a proper output to use
                     logger.error(f'`No suitable output detected (must be derived from '
-                                 f'`trw.train.OutputClassification`! Grad-CAM not calculated! '
+                                 f'`OutputClassification`! Grad-CAM not calculated! '
                                  f'class={target_class_name}')
                     return None
         else:

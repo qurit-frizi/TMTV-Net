@@ -224,7 +224,7 @@ class CallbackLearningRateFinder(Callback):
             nb_samples_per_learning_rate: the number of samples used to calculate the loss for each learning rate tried
             learning_rate_start: the learning rate starting value
             learning_rate_stop: the learning rate stopping value. When the learning rate exceed this value,
-                :class:`trw.callbacks.CallbackLearningRateFinder` will be stopped
+                :class:`callbacks.CallbackLearningRateFinder` will be stopped
             learning_rate_mul: the learning rate multiplier for the next learning rate to be tested
             learning_rate_final_multiplier: often the best learning rate is too high for full convergence. If
                 `set_new_learning_rate` is True, the final learning rate will be

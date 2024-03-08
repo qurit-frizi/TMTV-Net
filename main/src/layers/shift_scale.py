@@ -16,7 +16,7 @@ class ShiftScale(nn.Module):
 
     The output tensor will be (x - mean) / standard_deviation
 
-    This layer simplify the preprocessing for the `trw.simple_layers` package
+    This layer simplify the preprocessing for the `simple_layers` package
     """
     
     def __init__(self,

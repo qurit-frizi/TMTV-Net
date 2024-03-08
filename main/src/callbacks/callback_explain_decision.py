@@ -26,7 +26,7 @@ def len_batch(batch):
     Returns:
         the number of elements within a data split
     """
-    if isinstance(batch, (collections.abc.Sequence, torch.Tensor)):
+    if isinstance(batch, (collections.Sequence, torch.Tensor)):
         return len(batch)
 
     assert isinstance(batch, collections.Mapping), 'Must be a dict-like structure! got={}'.format(type(batch))
@@ -79,7 +79,7 @@ def get_batch_n(split, nb_samples, indices, transforms, use_advanced_indexing):
     if transforms is None:
         # do nothing: there is no transform
         pass
-    elif isinstance(transforms, collections.abc.Sequence):
+    elif isinstance(transforms, collections.Sequence):
         # we have a list of transforms, apply each one of them
         for transform in transforms:
             data = transform(data)
@@ -270,7 +270,7 @@ class CallbackExplainDecision(callback.Callback):
         if isinstance(algorithm, ExplainableAlgorithm):
             self.algorithms = [algorithm]
         else:
-            assert isinstance(algorithm, collections.abc.Sequence)
+            assert isinstance(algorithm, collections.Sequence)
             self.algorithms = algorithm
 
         self.batch = None

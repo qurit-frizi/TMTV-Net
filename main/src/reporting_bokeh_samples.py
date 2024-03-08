@@ -161,7 +161,7 @@ def process_data_samples__tabular(options, name, data, data_types, type_categori
         # to improve readability. TODO That could be improved
         div = Div(text=f"""
         <style>
-        .trw_reporting_table_{name} .slick-header-column {{
+        .eporting_table_{name} .slick-header-column {{
                 background-color: transparent;
                 background-image: none !important;
                 transform: 
@@ -189,7 +189,7 @@ def process_data_samples__tabular(options, name, data, data_types, type_categori
         columns=columns,
         row_height=row_height,
         #fit_columns=True,
-        css_classes=[f"trw_reporting_table_{name}"])
+        css_classes=[f"reporting_table_{name}"])
 
     columns = [data_table, div] if div is not None else [data_table]
 

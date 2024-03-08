@@ -153,7 +153,7 @@ def boxplots(
     :param maximum_chars_per_line: the maximum number of characters of the title per line
     :param title_line_height: the height of the title lines
     """
-    assert isinstance(features_trials, collections.abc.Mapping), 'must be a dictionary of list'
+    assert isinstance(features_trials, collections.Mapping), 'must be a dictionary of list'
     assert isinstance(next(iter(features_trials.keys())), collections.Iterable), 'each feature must be iterable'
 
     labels = []
@@ -272,7 +272,7 @@ def plot_roc(export_path, trues, found_scores_1, title, label_name=None, colors=
     plt.close()
 
 
-def list_classes_from_mapping(mappinginv: Optional[collections.abc.Mapping], default_name: str = 'unknown'):
+def list_classes_from_mapping(mappinginv: Optional[collections.Mapping], default_name: str = 'unknown'):
     """
     Create a contiguous list of label names ordered from 0..N from the class mapping
 
@@ -293,8 +293,8 @@ def list_classes_from_mapping(mappinginv: Optional[collections.abc.Mapping], def
 def classification_report(
         predictions: np.ndarray,
         prediction_scores: np.ndarray,
-        trues: collections.abc.Sequence,
-        class_mapping: Optional[collections.abc.Mapping] = None):
+        trues: collections.Sequence,
+        class_mapping: Optional[collections.Mapping] = None):
     """
     Summarizes the important statistics for a classification problem
     :param predictions: the classes predicted
@@ -402,7 +402,7 @@ def plot_group_histories(
     """
     if len(history_values) == 0:
         return
-    assert isinstance(history_values, collections.abc.Mapping), 'must be a dictionary of lists of values'
+    assert isinstance(history_values, collections.Mapping), 'must be a dictionary of lists of values'
     assert isinstance(next(iter(history_values.items()))[1], list), 'must be a dictionary of lists of values'
     assert len(history_values) <= len(colors), 'not enough colors!'
 

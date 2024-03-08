@@ -13,5 +13,3 @@ pydicom
 rt_utils
 nibabel
 mdutils
-pandas
-tqdm

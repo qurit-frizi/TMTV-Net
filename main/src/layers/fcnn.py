@@ -16,9 +16,8 @@ class FullyConvolutional(nn.Module):
 
     Example of a 2D network taking 1 input channel with 3 convolutions (16, 32, 64) and 3 deconvolutions (32, 16, 8):
     >>> import torch
-    >>> import trw
-    >>> convs = trw.layers.ConvsBase(dimensionality=2, input_channels=1, channels=[16, 32, 64])
-    >>> fcnn = trw.layers.FullyConvolutional(dimensionality=2, base_model=convs, deconv_filters=[64, 32, 16, 8], convolution_kernels=7, strides=[2] * 3, nb_classes=2)
+    >>> convs = layers.ConvsBase(dimensionality=2, input_channels=1, channels=[16, 32, 64])
+    >>> fcnn = layers.FullyConvolutional(dimensionality=2, base_model=convs, deconv_filters=[64, 32, 16, 8], convolution_kernels=7, strides=[2] * 3, nb_classes=2)
     >>> i = torch.zeros([5, 1, 32, 32], dtype=torch.float32)
     >>> o = fcnn(i)
 
@@ -55,7 +54,7 @@ class FullyConvolutional(nn.Module):
         """
 
         Args:
-            base_model: a base model. Must be an instance of :class:`trw.layers_legacy.ModuleWithIntermediate`. This
+            base_model: a base model. Must be an instance of :class:`layers_legacy.ModuleWithIntermediate`. This
                 model will return intermediate results of convolutional groups
             deconv_filters: the number of filters of the transposed convolution layers. Specified from the model output
                 back to the input. It must have "intermediate results" filters.
