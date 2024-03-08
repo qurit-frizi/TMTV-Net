@@ -48,15 +48,18 @@ Before running inference, build the Docker image:
 
 ``bash
 docker build -t tmtv-net-inference .
+``
+
+
 
 #### 1. Run Inference
 
 Run the Docker container for inference:
 
-docker run -it tmtv-net-inference python main.py
 
-
-
+``bash
+docker run -it -v [/absolute/local/data/folder]:/input -v [/absolute/local/output/folder]:/output tmtv-net-inference python main.py
+``
 
 
 ## Models

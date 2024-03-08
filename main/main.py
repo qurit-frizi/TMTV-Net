@@ -2,8 +2,8 @@ import sys
 sys.path.append('src')
 # Deployment env
 import os
-INPUT_DIR = os.environ["RAIVEN_INPUT_DIR"]
-OUTPUT_DIR = os.environ["RAIVEN_OUTPUT_DIR"]
+INPUT_DIR = "./input"
+OUTPUT_DIR = "./output"
 
 import copy
 import time
@@ -21,6 +21,8 @@ from preprocess import PreprocessDataV4_lung_soft_tissues_hot as Preprocessing
 from model_unet_multiclass_deepsupervision_configured_v1 import SimpleMulticlassUNet_dice_ce_fov_v9_ds_lung_soft_hot_boundary as ModelLargeFov
 from model_refiner_multiclass_deepsupervision_configured_v1 import Refiner_dice_ce_fov_v1_ds_lung_soft_hot_boundary as ModelRefiner
 from model_stacking import ModelStacking as ModelEnsemble
+# from auto_pet.projects.segmentation.preprocessing.create_dataset import create_case
+# from auto_pet.projects.segmentation.callbacks import create_inference
 from basic_typing import Batch
 import SimpleITK as sitk
 from SimpleITK import GetArrayFromImage, sitkNearestNeighbor, Image
@@ -34,7 +36,7 @@ import scipy.ndimage
 from utilities import transfer_batch_to_device, get_device
 from trainer_v2 import TrainerV2
 
-from raiven import Raiven # needs md2pdf module, pip install md2pdf, pip install pango
+# from raiven import Raiven # needs md2pdf module, pip install md2pdf, pip install pango
 import DicomNiftiConversion as dnc
 from rt_utils import RTStructBuilder
 import pydicom
@@ -600,7 +602,7 @@ def central_weighting(
     slices = [slice(d // 2 - c_h, d // 2 + c_h) for d, c_h in zip(block_shape, center_half_region)]
     w[tuple(slices)] = 1.0
 
-    w = weight_from_distance_transform_fn(scipy.ndimage.morphology.distance_transform_cdt(w < 0.5))
+    w = weight_from_distance_transform_fn(scipy.ndimage.distance_transform_cdt(w < 0.5))
     return w
 
 
@@ -777,7 +779,7 @@ def inference_process_wholebody_3d(
     # to be a multiple of a size
     if multiple_of is not None:
         for name in feature_name_present:
-            if isinstance(padding_value, collections.Mapping):
+            if isinstance(padding_value, collections.abc.Mapping):
                 p = padding_value.get(name)
                 assert p is not None, f'missing padding value for volume={name}'
             else:
@@ -1276,7 +1278,7 @@ if __name__ == '__main__':
     o_dict = debug_output(seg_sitk, seg_output_path, modality_dirs['ID'], modality_dirs['PT'])
 
     # Markdown   
-    raiven = Raiven()
+    # raiven = Raiven()
 
     # nii_file_pet = os.path.join(preprocessing_data_dir, patientid, 'study1','SUV.nii.gz')
     nii_file_pet = pt_nifti_path
@@ -1441,7 +1443,10 @@ if __name__ == '__main__':
     mdFile.new_line("")
     # mdFile.create_md_file()
 
-    raiven.savemd(mdFile, "output.md")
+    # raiven.savemd(mdFile, "output.md")
+
+    # Save the MdUtils object to a file
+    mdFile.create_md_file()
 
 
 
