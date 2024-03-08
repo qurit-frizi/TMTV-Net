@@ -63,7 +63,7 @@ docker run -it tmtv-net-inference python main.py
 
 This repository includes large models that are hosted on Google Drive due to their size. To download the models, follow these steps:
 
-1. Click on the following links to access the model files:
+1. Click on the following link to access the model files:
    - [Models](https://drive.google.com/file/d/1zfGIV_1k6YgijsEJUO9jVccN9Z67eJgi/view?usp=drive_link)
 
 2. Once the Google Drive page opens, click on the "Download" button to download the model file to your local machine.
