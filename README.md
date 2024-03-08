@@ -56,6 +56,22 @@ Run the Docker container for inference:
 docker run -it tmtv-net-inference python main.py
 
 
+
+
+
+## Models
+
+This repository includes large models that are hosted on Google Drive due to their size. To download the models, follow these steps:
+
+1. Click on the following links to access the model files:
+   - [Models](https://drive.google.com/file/d/1zfGIV_1k6YgijsEJUO9jVccN9Z67eJgi/view?usp=drive_link)
+
+2. Once the Google Drive page opens, click on the "Download" button to download the model file to your local machine.
+
+3. After downloading, you can place the model files in the appropriate directories within your Docker container or project folder.
+
+
+
 📦 Git LFS (Large File Storage)
 Due to the large size of the model files, we use Git LFS (Large File Storage) to efficiently handle and version these files. Make sure you have Git LFS installed to fetch the model weights properly.
 
