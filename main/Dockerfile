@@ -12,6 +12,7 @@ COPY . .
 
 
 # Assume requirements.txt was in the current directory, install dependencies that require pip install:
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6 -y
 RUN pip install --upgrade pip 
 RUN pip install -r requirements.txt
 
