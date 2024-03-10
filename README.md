@@ -31,38 +31,21 @@ The preprocessed data will be stored here: `<root>/dataset/preprocessed/`
 
 This repository includes a Docker setup for running inference using TMTV-Net. The Docker image encapsulates the necessary environment, dependencies, and the trained model for seamless and reproducible inference on new data.
 
+
 ### 📂 Directory Structure
 
-- **src:** Python files serving as libraries and helpers.
-- **models:** Folder containing the trained model weights (`.model` files).
-- **dockerfile:** Configuration file for building the Docker image.
-- **main.py:** Entry point for running inference.
-- **requirements.txt:** List of Python dependencies required for the Docker image.
+- **src:** This directory contains Python files serving as libraries and helpers.
+- ***models:*** This folder is designated for storing trained model weights (`.model` files). Please ensure to create a folder named "models" within the "src" directory. To access the model files that need to be included in the "models" folder, click the following link:
+   - [Models](https://drive.google.com/file/d/1zfGIV_1k6YgijsEJUO9jVccN9Z67eJgi/view?usp=drive_link)
+- **dockerfile:** Configuration file used for building the Docker image.
+- **main.py:** Entry point for executing inference.
+- **requirements.txt:** A list of Python dependencies required for the Docker image.
+
+
 
 ### 🚀 Usage
 
-#### 1. Build Docker Image
-
-
-Before running inference, build the Docker image:
-
-``bash
-docker build -t tmtv-net-inference .
-``
-
-
-
-#### 1. Run Inference
-
-Run the Docker container for inference:
-
-
-``bash
-docker run -it -v [/absolute/local/data/folder]:/input -v [/absolute/local/output/folder]:/output tmtv-net-inference python main.py
-``
-
-
-## Models
+### 0. Ensure to include model files
 
 This repository includes large models that are hosted on Google Drive due to their size. To download the models, follow these steps:
 
@@ -71,27 +54,41 @@ This repository includes large models that are hosted on Google Drive due to the
 
 2. Once the Google Drive page opens, click on the "Download" button to download the model file to your local machine.
 
-3. After downloading, you can place the model files in the appropriate directories within your Docker container or project folder.
+3. After downloading, please place the model files in a folder named "models" within the "src" directory.
 
 
+### 1. Donwload (Clone) this repo
 
-📦 Git LFS (Large File Storage)
-Due to the large size of the model files, we use Git LFS (Large File Storage) to efficiently handle and version these files. Make sure you have Git LFS installed to fetch the model weights properly.
+Clone this repository to your local machine using the following command:
 
-Installing Git LFS:
-#### On Linux
-sudo apt-get install git-lfs
-#### On macOS
-brew install git-lfs
-
-Clone Repository with LFS:
-git lfs install
+```bash
 git clone https://github.com/qurit-frizi/TMTV-Net.git
+```
+
+### 2. Build Docker Image
+
+Before running inference, build the Docker image. Navigate to the `main/` folder where the Dockerfile is located, then execute the following command:
+
+```bash
+docker build -t tmtv-net-inference .
+```
+
+
+### 3. Run Inference
+
+Execute the Docker container to perform inference:
+
+```bash
+docker run -it -v [/absolute/local/data/folder]:/input -v [/absolute/local/output/folder]:/output tmtv-net-inference
+```
+
+Ensure to replace [/absolute/local/data/folder] and [/absolute/local/output/folder] with the absolute paths to your local data and output folders respectively. This command will initiate the inference process within the Docker container.
 
 
 Feel free to explore and adapt the provided commands based on your specific folder structure or naming conventions. This Docker setup ensures a consistent and reproducible environment for running TMTV-Net inference.
 
-## Usage
+
+## License
 TMTV-Net is shared for research-use only. COMMERCIAL USE IS PROHIBITED for the time being. For further information please email frizi@bccrc.ca 
 
 ## 📖 Citations (to be updated based on the revision result)
