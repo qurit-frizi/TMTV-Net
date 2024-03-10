@@ -2,8 +2,8 @@ import sys
 sys.path.append('src')
 # Deployment env
 import os
-INPUT_DIR = "./input"
-OUTPUT_DIR = "./output"
+INPUT_DIR = "/input"
+OUTPUT_DIR = "/output"
 
 import copy
 import time
