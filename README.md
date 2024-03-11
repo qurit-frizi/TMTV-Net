@@ -45,7 +45,15 @@ This repository includes a Docker setup for running inference using TMTV-Net. Th
 
 ### 🚀 Usage
 
-### 0. Ensure to include model files
+### 0. Donwload (Clone) this repo
+
+Clone this repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/qurit-frizi/TMTV-Net.git
+```
+
+### 1. Ensure to include model files
 
 This repository includes large models that are hosted on Google Drive due to their size. To download the models, follow these steps:
 
@@ -54,16 +62,9 @@ This repository includes large models that are hosted on Google Drive due to the
 
 2. Once the Google Drive page opens, click on the "Download" button to download the model file to your local machine.
 
-3. After downloading, please place the model files in a folder named "models" within the "src" directory.
+3. After downloading, please place the model files in a folder named "models" within the "main/src" directory.
 
 
-### 1. Donwload (Clone) this repo
-
-Clone this repository to your local machine using the following command:
-
-```bash
-git clone https://github.com/qurit-frizi/TMTV-Net.git
-```
 
 ### 2. Build Docker Image
 
