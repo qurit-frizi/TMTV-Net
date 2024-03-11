@@ -13,7 +13,6 @@ Segmentation of Total Metabolic Tumor Volume (TMTV) holds significant value in f
 ## ⚙️  Usage <a name="installation"> </a>
 
 
-#📁 Required folder structure for training
 # Data Preprocessing
 
 For training you need to convert the nifti files to HDF5:
