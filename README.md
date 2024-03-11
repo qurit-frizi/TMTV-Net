@@ -23,7 +23,6 @@ For training you need to convert the nifti files to HDF5:
 
 The preprocessed data will be stored here: `<root>/dataset/preprocessed/`
 
-# 📁 Required folder structure for testing
 
 
 
@@ -85,6 +84,8 @@ docker run -it -v [/absolute/local/data/folder]:/input -v [/absolute/local/outpu
 ```
 
 Ensure to replace [/absolute/local/data/folder] and [/absolute/local/output/folder] with the absolute paths to your local data and output folders respectively. This command will initiate the inference process within the Docker container.
+
+📁 Required folder structure for testing: The input folder path in your machine should contain a folder of CT and a folder of PET DICOM scans. 
 
 
 Feel free to explore and adapt the provided commands based on your specific folder structure or naming conventions. This Docker setup ensures a consistent and reproducible environment for running TMTV-Net inference.
