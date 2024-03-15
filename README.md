@@ -84,7 +84,7 @@ docker run -it -v [/absolute/local/data/folder]:/input -v [/absolute/local/outpu
 
 Ensure to replace [/absolute/local/data/folder] and [/absolute/local/output/folder] with the absolute paths to your local data and output folders respectively. This command will initiate the inference process within the Docker container.
 
-Please ensure that the input/output mapping is correctly configured for Windows systems.
+<img src="[https://your-image-url.type](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6YkYhlwrf-k&psig=AOvVaw2TbKI6a38K3BwmGa4rOW3t&ust=1710612396984000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCOiSxP3t9oQDFQAAAAAdAAAAABAJ)" width="80%" height="80%"> Please ensure that the input/output mapping is correctly configured for Windows systems.
 
 📁 Required folder structure for testing: The input folder path in your machine should contain a folder of CT and a folder of PET DICOM scans. 
 
