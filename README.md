@@ -92,7 +92,8 @@ Please ensure that the input/output mapping is correctly configured for Windows 
 
 
 Feel free to explore and adapt the provided commands based on your specific folder structure or naming conventions. This Docker setup ensures a consistent and reproducible environment for running TMTV-Net inference.
-
+###Caution
+We will modify the "DicomNiftiConversion.py" soon! You could take a look at this repo if you need to do the conversion: https://github.com/lab-midas/autoPET/blob/master/data_conversion/tcia2nifti.py
 
 ## License
 TMTV-Net is shared for research-use only. COMMERCIAL USE IS PROHIBITED for the time being. For further information please email frizi@bccrc.ca 
