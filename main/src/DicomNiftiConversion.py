@@ -152,7 +152,7 @@ def dicomToNifti(seriesDir, savePath):
         pet = pydicom.dcmread(seriesNames[0])  # read one of the images for header info but it should be changed for each slice
         suv_result = bqml_to_suv(pet)
         suv_factor = suv_result[0]
-        Rescale_Slope = 1; #suv_result[1]
+        Rescale_Slope = 1; #suv_result[1] #based on the autoPET challenge suggestion: https://github.com/lab-midas/autoPET/blob/master/data_conversion/tcia2nifti.py
         Rescale_Intercept = 0; #suv_result[2]
 
         image = sitk.Multiply(image, Rescale_Slope)
