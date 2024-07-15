@@ -149,7 +149,7 @@ def dicomToNifti(seriesDir, savePath):
     image = reader.Execute()
 
     if traits["Modality"] == 'PT':
-        pet = pydicom.dcmread(seriesNames[0])  # read one of the images for header info
+        pet = pydicom.dcmread(seriesNames[0])  # read one of the images for header info but it should be changed for each slice
         suv_result = bqml_to_suv(pet)
         suv_factor = suv_result[0]
         Rescale_Slope = 1; #suv_result[1]
