@@ -12,6 +12,8 @@ Segmentation of Total Metabolic Tumor Volume (TMTV) holds significant value in f
 
 *Figure 1: TMTV-Net, was utilized at the University of Wisconsin on their dataset for the segmentation of TMTV. (a) Hodgkin Case, DSC=0.83, TMTV relative error=0.18, (b) DLBCL case, DSC=0.66, TMTV relative error=0.10, (c) Hodgkins case, DSC=0.76, (d) DLBCL, DSC=0.67.*
 
+## New features and updates 
+The SUV conversion for pre-processing is updated.
 
 
 ## ⚙️  Usage <a name="installation"> </a>
