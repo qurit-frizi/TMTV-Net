@@ -2,6 +2,9 @@
 
 [![DOI](https://zenodo.org/badge/697986110.svg)](https://zenodo.org/doi/10.5281/zenodo.12813295)
 
+<p align="left">
+  <a href="https://www.bccrc.ca/dept/io-programs/qurit/"><img src="https://www.bccrc.ca/dept/io-programs/qurit/sites/qurit/files/FINAL_QURIT_PNG_60.png" height="70"/></a>
+</p>
 ***Overview***
 Segmentation of Total Metabolic Tumor Volume (TMTV) holds significant value in facilitating quantitative imaging biomarkers for lymphoma management. We addressed the challenging task of automated tumor delineation in lymphoma from PET/CT scans. Our model, TMTV-Net, is specifically designed to automate TMTV segmentation from PET/CT scans. TMTV-Net demonstrates robust performance and adaptability in TMTV segmentation across diverse multi-site external datasets, encompassing various lymphoma subtypes. Furthermore, we have containerized our model and made it available in this repository for additional multi-site evaluations and generalizability analyses.
 
